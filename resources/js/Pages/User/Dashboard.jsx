@@ -2,11 +2,14 @@ import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head } from "@inertiajs/inertia-react";
 import { IoSettings, IoPeople, IoDesktop, IoPieChart } from "react-icons/io5";
+import Sidebar from '../../Components/layout/sidebar';
+
+
 export default function Dashboard(props) {
     return (
         <>
             <Head title="Dashboard" />
-            <div className="flex h-screen w-full">
+            {/* <div className="flex h-screen w-full">
                 <div className="flex w-1/5 shadow-md">
                     <div className="flex flex-col w-full h-auto">
                         <div className="flex px-4 py-10 bg-gray-800 w-full shadow-md">
@@ -87,7 +90,17 @@ export default function Dashboard(props) {
                     </div>
                 </div>
                 <div className="flex w-4/5 bg-gray-200"></div>
-            </div>
+            </div> */}
+            <Sidebar page={
+                (
+                    <>
+                        <div className="p-4">
+                            <h1>Dashboard</h1>
+                        </div>
+                    </>
+                )
+            }/>
+          
         </>
     );
 }
